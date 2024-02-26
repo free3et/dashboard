@@ -1,3 +1,4 @@
+import React from "react";
 import { fetchAllUsers, fetchMessagesForSearch } from "@/app/lib/data";
 import { AddMessage } from "@/app/ui/dashboard/messages/addMessage";
 import SelectUser from "@/app/ui/dashboard/messages/selectUser";

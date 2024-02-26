@@ -1,3 +1,4 @@
+import React from "react";
 import { fetchAllUsers } from "@/app/lib/data";
 import Image from "next/image";
 import styles from "./activities.module.css";

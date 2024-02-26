@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "@/app/ui/dashboard/keywords/keywords.module.css";
 import Search from "@/app/ui/dashboard/search/search";
 import { fetchAllKeywords, fetchKeywordsForSearch } from "@/app/lib/data";

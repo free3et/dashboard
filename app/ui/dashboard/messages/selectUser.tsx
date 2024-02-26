@@ -1,12 +1,12 @@
 "use client";
 
+import React, { useEffect, useState } from "react";
 import {
   deleteMessage,
   messageByUserId,
   reactToMessage,
 } from "@/app/lib/actions";
 import { SimplifiedMessagesProp, UserFormData } from "@/app/types/types";
-import React, { useEffect, useState } from "react";
 import styles from "@/app/ui/dashboard/messages/messages.module.css";
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import { FaRegMessage } from "react-icons/fa6";

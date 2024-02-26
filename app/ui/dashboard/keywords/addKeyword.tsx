@@ -1,4 +1,6 @@
 "use client";
+
+import React from "react";
 import { addKeywords } from "@/app/lib/actions";
 import styles from "@/app/ui/dashboard/keywords/keywords.module.css";
 import { useState } from "react";
@@ -28,7 +30,7 @@ export const AddKeyword = () => {
     <>
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.inputWrapper}>
-          <label className={styles.title}>Let's add a keyword!</label>
+          <label className={styles.title}>Let&apos;s add a keyword!</label>
 
           <label htmlFor="keyword" className={styles.title}>
             Keyword text:

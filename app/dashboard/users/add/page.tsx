@@ -1,3 +1,4 @@
+import React from "react";
 import { addUser } from "@/app/lib/actions";
 import styles from "@/app/ui/dashboard/users/addUser/addUser.module.css";
 

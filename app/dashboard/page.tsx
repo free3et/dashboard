@@ -1,3 +1,4 @@
+import React from "react";
 import { fetchAllKeywords, fetchAllMessages, fetchAllUsers } from "../lib/data";
 import Card from "../ui/dashboard/card/card";
 import Chart from "../ui/dashboard/chart/chart";

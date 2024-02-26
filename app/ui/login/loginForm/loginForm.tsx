@@ -1,6 +1,5 @@
 "use client";
-
-import { Session } from "next-auth";
+import React from "react";
 import styles from "./loginForm.module.css";
 import { useFormState } from "react-dom";
 import { authenticate } from "../../../lib/actions";

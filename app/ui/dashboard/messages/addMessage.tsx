@@ -1,3 +1,4 @@
+import React from "react";
 import { addMessage } from "@/app/lib/actions";
 import { UserFormData } from "@/app/types/types";
 import styles from "@/app/ui/dashboard/messages/messages.module.css";
@@ -8,7 +9,7 @@ export const AddMessage = ({ users }: { users: UserFormData[] }) => {
       <form action={addMessage} className={styles.form}>
         <div className={styles.inputWrapper}>
           <label htmlFor="userId" className={styles.title}>
-            Lets's add a message!
+            Lets&apos;s add a message!
           </label>
           <select name="userId" id="userId">
             {users?.map((user) => (
