@@ -5,6 +5,7 @@
 
 ### Login page
 The login page is a form where you need to enter your username and password.
+Live demo - [https://dashboard-m3mq-9gnb0fa5c-free3et.vercel.app/login](https://dashboard-m3mq-9gnb0fa5c-free3et.vercel.app/login)
 
 ### Main page
 The main page displays generalized information on the number of users, keywords and messages, created a table of the most active users and a schedule of visits to the application by day of the week.
@@ -34,8 +35,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the r
 - The application was created using
 - ⚛️ React 18 [https://react.dev/](https://react.dev/),
 - 🤝 Next.js 14.0.1 [https://nextjs.org/](https://nextjs.org/). New version with server/client components and server actions
-- 🔏 Next Auth 5.0.0-beta.3 [[https://nextjs.org/](https://next-auth.js.org/)]([https://nextjs.org/](https://next-auth.js.org/)).
-- 🎨 Recharts 2.9.0 [[https://react.dev/](https://recharts.org/en-US/)]([https://react.dev/](https://recharts.org/en-US/)),
-- 🎛️ Mongo DB as database [[https://react.dev/](https://www.mongodb.com/)]([https://react.dev/](https://www.mongodb.com/)),
-- 🤝 Mongoose 8.0.0 for database connection  [[[https://react.dev/](https://www.mongodb.com/)]([https://mongoosejs.com/)]([https://react.dev/](https://www.mongodb.com/)](https://mongoosejs.com/)),
+- 🔏 Next Auth 5.0.0-beta.3 [https://nextjs.org/](https://next-auth.js.org/)
+- 🎨 Recharts 2.9.0 [https://react.dev/](https://recharts.org/en-US/)
+- 🎛️ Mongo DB as database [https://react.dev/](https://www.mongodb.com/)
+- 🤝 Mongoose 8.0.0 for database connection  [https://mongoosejs.com/](https://mongoosejs.com/),
 
