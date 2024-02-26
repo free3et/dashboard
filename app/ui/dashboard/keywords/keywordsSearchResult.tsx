@@ -57,8 +57,6 @@ export const KeywordsSearchResult: React.FC<KeywordsSearchResultProps> = ({
       formData.append("keywordname", selectedKeyword);
 
       const { messagesData } = await messageByKeyword(formData);
-      console.log("Messages data received:", messagesData);
-
       setMessages(messagesData);
     } catch (error) {
       console.error(error);
