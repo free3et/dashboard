@@ -10,6 +10,7 @@ import { SimplifiedMessagesProp, UserFormData } from "@/app/types/types";
 import styles from "@/app/ui/dashboard/messages/messages.module.css";
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import { FaRegMessage } from "react-icons/fa6";
+import { IoSearchCircleOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
 import { MdDeleteOutline } from "react-icons/md";
@@ -153,7 +154,6 @@ const SelectUser = ({
       </form>
 
       <div>
-        <h4 className={styles.title}>Messages for </h4>
         <ul>
           {messages?.map((message, index) => (
             <li key={index} className={styles.list}>
@@ -178,12 +178,14 @@ const SelectUser = ({
               />
             </li>
           ))}
-          {searchMessages && <h4 className={styles.title}>We founded </h4>}
+          {searchMessages.length > 0 && (
+            <h4 className={styles.title}>We found this message by searching</h4>
+          )}
           {searchMessages?.map(
             (message: SimplifiedMessagesProp, index: number) => (
               <li key={index} className={styles.list}>
-                <FaRegMessage className={styles.msgIcon} />
-                <strong className={styles.username}>{message.username}:</strong>
+                <IoSearchCircleOutline className={styles.svg} size={30} />
+
                 {message.comment}
                 {liked[message._id] && message?.reactions?.liked === true ? (
                   <FaHeart
