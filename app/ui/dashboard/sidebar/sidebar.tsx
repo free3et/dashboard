@@ -45,9 +45,7 @@ export const Sidebar = async () => {
 
   const { user } = session;
 
-  console.log(user);
-
-  const { username, image } = user;
+  const { username, image } = user as { username?: string; image?: string };
 
   return (
     <div className={styles.container}>
