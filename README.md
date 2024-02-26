@@ -12,7 +12,7 @@ The main page displays generalized information on the number of users, keywords 
 ### User page
 The user page consists of the following functionality: a table of users with their data, the ability to add a new user, search by user, edit information, delete a user, pagination by user.
 
-### Mssage page
+### Message page
 The message page consists of a block for adding a new message and a filter block. The functionality of filtering by users, date, and preferences has been implemented.
 
 ### Keywords page
