@@ -106,8 +106,6 @@
     border-radius: 5px;
     background-color: var(--bgBlue);
     color: var(--text);
-    cursor: pointer;
-
     gap: 15px;
 }
 
