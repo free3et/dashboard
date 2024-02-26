@@ -42,7 +42,7 @@ const Dashboard = async () => {
             <Card item={item} key={item.id} />
           ))}
         </div>
-        {/* @ts-expect-error Server Component */}
+        {/* @ts-ignore */}
         <Activities />
         <Chart />
       </div>
