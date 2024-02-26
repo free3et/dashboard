@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Dashboard
 
-## Getting Started
+- This dashboard full-stack application consists of several pages: login page, main page, user page, messages, keywords.
 
-First, run the development server:
+
+### Login page
+The login page is a form where you need to enter your username and password.
+
+### Main page
+The main page displays generalized information on the number of users, keywords and messages, created a table of the most active users and a schedule of visits to the application by day of the week.
+
+### User page
+The user page consists of the following functionality: a table of users with their data, the ability to add a new user, search by user, edit information, delete a user, pagination by user.
+
+### Mssage page
+The message page consists of a block for adding a new message and a filter block. The functionality of filtering by users, date, and preferences has been implemented.
+
+### Keywords page
+The keywords page consists of a block for adding new keywords. The second block contains a search by keywords, as well as a search for messages from the application in which the selected keywords are found with the functionality of highlighting them.
+
+The sidebar also has a logout button, which allows you to exit the application as a user
+
+## Let's start
+
+First, clone the repository and start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Dependencies
+- The application was created using
+- ⚛️ React 18 [https://react.dev/](https://react.dev/),
+- 🤝 Next.js 14.0.1 [https://nextjs.org/](https://nextjs.org/). New version with server/client components and server actions
+- 🔏 Next Auth 5.0.0-beta.3 [[https://nextjs.org/](https://next-auth.js.org/)]([https://nextjs.org/](https://next-auth.js.org/)).
+- 🎨 Recharts 2.9.0 [[https://react.dev/](https://recharts.org/en-US/)]([https://react.dev/](https://recharts.org/en-US/)),
+- 🎛️ Mongo DB as database [[https://react.dev/](https://www.mongodb.com/)]([https://react.dev/](https://www.mongodb.com/)),
+- 🤝 Mongoose 8.0.0 for database connection  [[[https://react.dev/](https://www.mongodb.com/)]([https://mongoosejs.com/)]([https://react.dev/](https://www.mongodb.com/)](https://mongoosejs.com/)),
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
