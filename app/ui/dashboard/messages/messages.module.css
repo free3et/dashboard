@@ -72,6 +72,7 @@
 
 .title {
   margin-bottom: 30px;
+  margin-top: 30px;
   color: var(--text);
   display: block;
 }
@@ -99,8 +100,8 @@
 }
 
 .svg {
-  min-width: 25px;
-  min-height: 25px;
+  min-width: 28px;
+  min-height: 28px;
 }
 
 .svgFill {
