@@ -12,7 +12,7 @@ const Layout = ({
   return (
     <div className={styles.container}>
       <div className={styles.menu}>
-        {/* @ts-expect-error Server Component */}
+        {/* @ts-ignore*/}
         <Sidebar />
       </div>
       <div className={styles.content}>
