@@ -11,7 +11,15 @@ const MessagesPage = async ({ searchParams }: { searchParams: any }) => {
   const plainUsers = JSON.parse(JSON.stringify(users));
   const q = searchParams?.q || "";
   const page = searchParams?.page || 1;
-  const { count, messages } = await fetchMessagesForSearch(q, page);
+
+  let messages = [];
+  let count = 0;
+
+  if (q) {
+    const result = await fetchMessagesForSearch(q, page);
+    count = result.count;
+    messages = result.messages;
+  }
 
   return (
     <div className={styles.containerMsg}>
