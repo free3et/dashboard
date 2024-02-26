@@ -6,6 +6,7 @@ module.exports = {
   rules: {
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/prefer-ts-expect-error": "error",
   },
   overrides: [
     {
