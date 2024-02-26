@@ -1,0 +1,39 @@
+:root {
+  --bg: #3a4458;
+  --bgDark: #242e3a;
+  --button: #008388;
+  --text: #ffffff;
+  --textGray: #b7bac1;
+  --bgPink: #D99DBD;
+  --bgOrange: #BE861F;
+  --bgBlue: #0099FA;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+label {
+  padding-right: 15px;
+}
+
+.highlight {
+  background-color: var(--bgOrange);
+  font-weight: bold;
+}

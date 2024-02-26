@@ -1,0 +1,150 @@
+.container {
+    width: 50%;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--bgDark);
+}
+
+.container:nth-child(1) {
+    width: 30%;
+}
+
+.container:nth-child(2) {
+    width: 70%;
+}
+
+.wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.form {
+    margin-top: 30px;
+}
+
+.form input {
+    margin-bottom: 30px;
+}
+
+.form input,
+.form select {
+    height: 50px;
+
+    padding: 10px;
+    border: 1px solid var(--textGray);
+    border-radius: 10px;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.form input, .form select {
+    width: 45%;
+    margin-right: 20px;
+    color: var(--text);
+  }
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputWrapper input {
+    width: 100%;
+}
+
+.btn {
+    width: 150px;
+    height: 48px;
+    margin-bottom: 30px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button);
+    color: var(--text);
+    cursor: pointer;
+}
+
+.form .addMsg {
+    width: 120px;
+    height: 48px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button);
+    color: var(--text);
+    cursor: pointer;
+}
+
+.title {
+    display: block;
+    margin-bottom: 30px;
+    color: var(--text);
+}
+
+.svg {
+    min-width: 25px;
+    min-height: 25px;
+}
+
+.filters {
+    display: flex;
+    align-items: baseline;
+}
+
+.keyWrapper {
+    margin-top: 30px;
+}
+
+.key {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bgBlue);
+    color: var(--text);
+    cursor: pointer;
+
+    gap: 15px;
+}
+
+.key:nth-child(2n) {
+    background-color: var(--button);
+}
+
+.key:nth-child(3n) {
+    background-color: var(--bgOrange);
+}
+
+.key:nth-child(4n) {
+    background-color: var(--bgPink);
+}
+
+.success {
+    margin-top: 20px;
+    color: var(--bgBlue);
+}
+
+.error {
+    margin-top: 20px;
+    color: var(--bgPink);
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid var(--textGray);
+    border-radius: 10px;
+    gap: 15px;
+    width: fit-content;
+}
+
+.msgIcon {
+    min-width: 20px;
+    min-height: 20px;
+  }

@@ -1,0 +1,125 @@
+.container {
+  background-color: var(--bgDark);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 50%;
+}
+
+.containerMsg {
+  margin-top: 25px;
+}
+
+.wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.form {
+}
+
+.form input,
+.form textarea,
+.form select {
+  padding: 10px;
+  background-color: var(--bg);
+  color: var(--text);
+  border: 2px solid #2e374a;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  height: 50px;
+}
+
+.form input, .form select {
+  width: 45%;
+  margin-right: 20px;
+  color: var(--text);
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputWrapper select,
+.inputWrapper input {
+  width: 100%;
+}
+
+.btn{
+  width: 150px;
+  height: 48px;
+  padding: 10px;
+  background-color: var(--button);
+  color: var(--text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 30px;
+
+}
+
+.form .addMsg{
+  width: 120px;
+  height: 48px;
+  padding: 10px;
+  background-color: var(--button);
+  color: var(--text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.title {
+  margin-bottom: 30px;
+  color: var(--text);
+  display: block;
+}
+
+.noMsg {
+  margin-bottom: 10px;
+  color: var(--bgPink);
+}
+
+.form .liked {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  top: 5px;
+}
+
+.username {
+  min-width: 90px;
+}
+
+.msgIcon {
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.svg {
+  min-width: 25px;
+  min-height: 25px;
+}
+
+.svgFill {
+  color: var(--bgPink);
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.filters {
+  display: flex;
+  align-items: baseline;
+}
+
+.list {
+  display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid var(--textGray);
+    border-radius: 10px;
+    padding: 15px;
+}
