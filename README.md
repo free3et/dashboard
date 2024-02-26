@@ -5,7 +5,10 @@
 
 ### Login page
 The login page is a form where you need to enter your username and password.
-Live demo - [https://dashboard-m3mq-9gnb0fa5c-free3et.vercel.app/login](https://dashboard-m3mq-9gnb0fa5c-free3et.vercel.app/login)
+Live demo - [https://dashboard-ppytobqam-free3et.vercel.app/login](https://dashboard-ppytobqam-free3et.vercel.app/login)
+
+✌️ Login: John Doe
+🔏 password: 123456
 
 ### Main page
 The main page displays generalized information on the number of users, keywords and messages, created a table of the most active users and a schedule of visits to the application by day of the week.
