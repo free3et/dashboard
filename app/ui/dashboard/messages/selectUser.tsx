@@ -46,7 +46,11 @@ const SelectUser = ({
   };
 
   const handleFilterChange = (filterType: string, value: string) => {
-    setFilters({ ...filters, [filterType]: value });
+    if (filterType === "liked") {
+      setFilters({ ...filters, [filterType]: !filters.liked });
+    } else {
+      setFilters({ ...filters, [filterType]: value });
+    }
   };
 
   useEffect(() => {
