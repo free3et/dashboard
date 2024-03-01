@@ -1,12 +1,33 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { addMessage } from "@/app/lib/actions";
 import { UserFormData } from "@/app/types/types";
 import styles from "@/app/ui/dashboard/messages/messages.module.css";
 
+interface MessageState {
+  type: string;
+  text?: string;
+}
+
 export const AddMessage = ({ users }: { users: UserFormData[] }) => {
+  const [message, setMessage] = useState<MessageState | null>(null);
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const result = await addMessage(formData);
+
+    if (result.success) {
+      setMessage({ type: "success", text: result.message });
+    } else if (result.error) {
+      setMessage({ type: "error", text: result.error });
+    }
+  };
   return (
     <div className={styles.container}>
-      <form action={addMessage} className={styles.form}>
+      <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.inputWrapper}>
           <label htmlFor="userId" className={styles.title}>
             Lets&apos;s add a message!
@@ -30,6 +51,13 @@ export const AddMessage = ({ users }: { users: UserFormData[] }) => {
           Add Message
         </button>
       </form>
+      {message && (
+        <div
+          className={message.type === "success" ? styles.success : styles.error}
+        >
+          {message.text}
+        </div>
+      )}
     </div>
   );
 };
