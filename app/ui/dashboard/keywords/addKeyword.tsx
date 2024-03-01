@@ -5,13 +5,13 @@ import { addKeywords } from "@/app/lib/actions";
 import styles from "@/app/ui/dashboard/keywords/keywords.module.css";
 import { useState } from "react";
 
-interface MessageState {
+interface KeywordsState {
   type: string;
-  text: string;
+  text?: string;
 }
 
 export const AddKeyword = () => {
-  const [message, setMessage] = useState<MessageState | null>(null);
+  const [message, setMessage] = useState<KeywordsState | null>(null);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
