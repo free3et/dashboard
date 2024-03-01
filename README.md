@@ -38,8 +38,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the r
 - The application was created using
 - ⚛️ React 18 [https://react.dev/](https://react.dev/),
 - 🤝 Next.js 14.0.1 [https://nextjs.org/](https://nextjs.org/). New version with server/client components and server actions
-- 🔏 Next Auth 5.0.0-beta.3 [https://nextjs.org/](https://next-auth.js.org/)
-- 🎨 Recharts 2.9.0 [https://react.dev/](https://recharts.org/en-US/)
-- 🎛️ Mongo DB as database [https://react.dev/](https://www.mongodb.com/)
+- 🔏 Next Auth 5.0.0-beta.3 [https://next-auth.js.org/](https://next-auth.js.org/)
+- 🎨 Recharts 2.9.0 [https://recharts.org/en-US/](https://recharts.org/en-US/)
+- 🎛️ Mongo DB as database [https://www.mongodb.com/](https://www.mongodb.com/)
 - 🤝 Mongoose 8.0.0 for database connection  [https://mongoosejs.com/](https://mongoosejs.com/),
 
