@@ -87,6 +87,10 @@ export const deleteUser = async (formData) => {
 export const addKeywords = async (formData) => {
   const { keyword } = Object.fromEntries(formData);
 
+  if (!keyword.trim()) {
+    return { success: false, error: "Keyword cannot be empty" };
+  }
+
   try {
     connectToDB();
 
@@ -103,7 +107,6 @@ export const addKeywords = async (formData) => {
     await newKeyword.save();
 
     revalidatePath("/dashboard/keywords");
-    redirect("/dashboard/keywords");
 
     return { success: true, message: "Keyword added successfully" };
   } catch (err) {
@@ -122,11 +125,13 @@ export const deleteKeyword = async (id) => {
   }
 
   revalidatePath("/dashboard/keywords");
-  redirect("/dashboard/keywords");
 };
 
 export const addMessage = async (formData) => {
   const { userId, comment } = Object.fromEntries(formData);
+  if (!comment.trim()) {
+    return { success: false, error: "Comment cannot be empty" };
+  }
 
   try {
     connectToDB();
@@ -142,7 +147,8 @@ export const addMessage = async (formData) => {
     });
 
     revalidatePath("/dashboard/messages");
-    redirect("/dashboard/messages");
+
+    return { success: true, message: "Message added successfully" };
   } catch (err) {
     console.error(err);
     throw new Error("Failed to create message!");
@@ -153,12 +159,12 @@ export const deleteMessage = async (id) => {
   try {
     connectToDB();
     await Message.findByIdAndDelete(id);
-    revalidatePath("/dashboard/messages");
-    redirect("/dashboard/messages");
   } catch (err) {
     console.log(err);
-    throw new Error("Failed to delete keyword!");
+    throw new Error("Failed to delete message!");
   }
+
+  revalidatePath("/dashboard/messages");
 };
 
 export const messageByUserId = async (formData) => {
@@ -179,7 +185,7 @@ export const messageByUserId = async (formData) => {
     }
 
     if (filters.liked) {
-      filterQuery["reactions.liked"] = true;
+      filterQuery["reactions.liked"] = filters.liked;
     }
 
     const messages = await Message.find(filterQuery).populate("user");
@@ -246,7 +252,7 @@ export const reactToMessage = async (messageId, userId) => {
 
     message.user = message.user.toJSON();
     revalidatePath("/dashboard/messages");
-    redirect("/dashboard/messages");
+
     return { success: true };
   } catch (err) {
     console.log(err);
@@ -264,5 +270,13 @@ export const authenticate = async (prevState, formData) => {
       return "Wrong Credentials";
     }
     throw err;
+  }
+};
+
+export const googleAuthenticate = async (prevState, formData) => {
+  try {
+    await signIn("google");
+  } catch (error) {
+    throw error;
   }
 };
