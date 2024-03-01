@@ -1,6 +1,6 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import GoogleProvider from "next-auth/providers/google";
+import google from "next-auth/providers/google";
 import { authConfig } from "./authconfig";
 import { connectToDB } from "./lib/utils";
 import { User } from "./lib/models";
@@ -10,8 +10,6 @@ const login = async (credentials) => {
   try {
     connectToDB();
     const user = await User.findOne({ username: credentials.username });
-
-    console.log(user);
 
     if (!user) throw new Error("Wrong credentials!");
 
@@ -31,7 +29,13 @@ const login = async (credentials) => {
   }
 };
 
-export const { signIn, signOut, auth } = NextAuth({
+export const {
+  handlers: { GET, POST },
+  auth,
+  signIn,
+  signOut,
+  update,
+} = NextAuth({
   ...authConfig,
   providers: [
     CredentialsProvider({
@@ -44,10 +48,9 @@ export const { signIn, signOut, auth } = NextAuth({
         }
       },
     }),
-    GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      //callbackUrl: "http://localhost:3000/api/auth/callback/google",
+    google({
+      clientId: process.env.GOOGLE_CLIENT_ID ?? "",
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? "",
     }),
   ],
   secret: process.env.AUTH_SECRET,
